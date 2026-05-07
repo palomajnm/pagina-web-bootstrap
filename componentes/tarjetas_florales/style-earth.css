@@ -1,0 +1,152 @@
+/* Definir variables para los colores de tierra (marrones) */
+:root {
+    --earth-dark: #3e2723;
+    --earth-brown: #5d4037;
+    --earth-accent: #a1887f;
+    --earth-light: #efebe9;
+    --earth-glow: rgba(161, 136, 127, 0.6);
+}
+
+/* Override global body background with higher specificity */
+html body {
+    background: linear-gradient(135deg, #3e2723 0%, #4e342e 50%, #5d4037 100%) !important;
+    background-size: 200% 200%;
+    animation: earthBackground 15s ease infinite !important;
+    color: #fff;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    min-height: 100vh;
+}
+
+@keyframes earthBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container styling with Glassmorphism (Earth Version) */
+.body-earth {
+    background: rgba(93, 64, 55, 0.6);
+    /* Translucent brown */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(161, 136, 127, 0.3);
+    box-shadow: 0 0 40px rgba(62, 39, 35, 0.5), inset 0 0 30px rgba(161, 136, 127, 0.1);
+    margin: 4rem auto;
+    width: 95%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Dusty particle effect overlay */
+.body-earth::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(161, 136, 127, 0.2) 0%, transparent 65%);
+    animation: rotateFlow 30s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateFlow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Typography styles */
+.body-earth h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+
+    /* Gradient Text */
+    background: linear-gradient(to right, #d7ccc8, #a1887f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 10px rgba(93, 64, 55, 0.8));
+    animation: simpleFloat 5s ease-in-out infinite;
+}
+
+@keyframes simpleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.body-earth h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #d7ccc8;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Grid Styles */
+.row {
+    position: relative;
+    z-index: 1;
+}
+
+.col {
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
+    cursor: pointer;
+    filter: brightness(0.9) sepia(0.3);
+    /* Slight sepia for earthy feel */
+}
+
+img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(62, 39, 35, 0.6), 0 0 20px var(--earth-accent);
+    border-color: var(--earth-accent);
+    filter: brightness(1.1) sepia(0);
+    z-index: 10;
+}

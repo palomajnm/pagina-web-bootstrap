@@ -1,0 +1,149 @@
+/* Definir variables para los colores de fuego */
+:root {
+    --fire-dark: #2a0a0a;
+    --fire-red: #8b0000;
+    --fire-orange: #ff4500;
+    --fire-gold: #ffd700;
+    --fire-glow: rgba(255, 69, 0, 0.6);
+}
+
+/* Override global body background with higher specificity */
+html body {
+    background: linear-gradient(135deg, var(--fire-dark) 0%, #4a0e0e 50%, #000000 100%) !important;
+    background-size: 200% 200%;
+    animation: fireBackground 10s ease infinite !important;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+@keyframes fireBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container styling with Glassmorphism */
+.body-fire {
+    background: rgba(42, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 69, 0, 0.3);
+    box-shadow: 0 0 40px rgba(255, 69, 0, 0.2), inset 0 0 20px rgba(255, 69, 0, 0.1);
+    margin: 4rem auto;
+    width: 95%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.body-fire::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.1) 0%, transparent 70%);
+    animation: rotateGlow 15s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Typography styles */
+.body-fire h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+
+    /* Gradient Text */
+    background: linear-gradient(to bottom, var(--fire-gold), var(--fire-orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8));
+    animation: textPulse 3s infinite alternate;
+}
+
+@keyframes textPulse {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
+    }
+}
+
+.body-fire h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--fire-gold);
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Grid Styles */
+.row {
+    position: relative;
+    z-index: 1;
+}
+
+.col {
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+img {
+    width: 100%;
+    height: 400px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.5), 0 0 20px var(--fire-gold);
+    border-color: var(--fire-gold);
+    filter: brightness(1.1) saturate(1.2);
+    z-index: 10;
+}

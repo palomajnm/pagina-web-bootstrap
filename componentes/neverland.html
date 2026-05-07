@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Legend of Neverland</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--barra de navegacion bootstrap-->
+        <nav class="navbar navbar-expand-lg mi-nav-personalizada" role="navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Wiki Legend of Neverland</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--enlaces-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#carouselExampleIndicators">🌍Mundo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hadas_florales">🧚‍♀️Hadas Florales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#personajes">🆚Clases</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="./../plantilla/startbootstrap-heroic-features-gh-pages/index.html">📋Infografia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="fade-in">
+        <!--carrusel de imagenes-->
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/imagen1.jpg" class="d-block w-100" alt="imagen1" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/imagen2.jpg" class="d-block w-100" alt="imagen2" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/imagen3.jpg" class="d-block w-100" alt="imagen3" loading="lazy">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--creacion de tarjetas-->
+        <div id="hadas_florales">
+            <h1>TIPOS DE HADAS FLORALES</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card w-75 mx-auto">
+                        <div class="card-body-fire">
+                            <a href="./tarjetas_florales/hadas_fuego.html">
+                                <p class="card-text">Fuego</p>
+                            </a>
+                        </div>
+                        <img src="./images/hada1.jpg" class="card-img-top" alt="hada de fuego" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card w-75 mx-auto">
+                        <div class="card-body-water">
+                            <a href="./tarjetas_florales/hadas_agua.html">
+                                <p class="card-text">Agua</p>
+                            </a>
+                        </div>
+                        <img src="./images/hada2.jpg" class="card-img-top" alt="hada de agua" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card w-75 mx-auto">
+                        <div class="card-body-wind">
+                            <a href="./tarjetas_florales/hadas_aire.html">
+                                <p class="card-text">Aire</p>
+                            </a>
+                        </div>
+                        <img src="./images/hada3.jpg" class="card-img-top" alt="hada de aire" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card w-75 mx-auto">
+                        <div class="card-body-earth">
+                            <a href="./tarjetas_florales/hadas_tierra.html">
+                                <p class="card-text">Tierra</p>
+                            </a>
+                        </div>
+                        <img src="./images/hada5.jpg" class="card-img-top" alt="hada de tierra" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card w-75 mx-auto">
+                        <div class="card-body-holy">
+                            <a href="./tarjetas_florales/hadas_holy.html">
+                                <p class="card-text">Sagrada</p>
+                            </a>
+                        </div>
+                        <img src="./images/hada6.jpg" class="card-img-top" alt="hada sagrada" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Hadas Florales -->
+
+        <br>
+        <!--Creacion de alertas(clases de personajes)-->
+        <div id="personajes">
+            <h1>CLASES DE PERSONAJES</h1>
+            <div class="row justify-content-center">
+                <div class="alert alert-primary col-md-4 m-2" role="alert">
+                    <h4>Ninja</h4>
+                    <img width="64" height="64"
+                        src="https://img.icons8.com/external-flat-amoghdesign/32/external-fight-military-and-war-flat-amoghdesign.png"
+                        alt="external-fight-military-and-war-flat-amoghdesign" />
+                    <hr>
+                    <p>
+                        La clase Ninja es un repartidor de daño cuerpo a cuerpo que utiliza el kunai para dañar a
+                        los
+                        enemigos.
+                        Tienen dos especializaciones
+                    <ul>
+                        <li>Búho Ardiente</li>
+                        <li>Búho Sombrío</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="alert alert-secondary col-md-4 m-2" role="alert">
+                    <h4>Lancero</h4>
+                    <img width="64" height="64"
+                        src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/external-spear-alaska-icongeek26-flat-icongeek26.png"
+                        alt="external-spear-alaska-icongeek26-flat-icongeek26" />
+                    <hr>
+                    <p>
+                        Es una clase cuerpo a cuerpo que usa el poder dracónico para asestar golpes devastadores a
+                        los
+                        enemigos, usando la versatilidad de una lanza para acortar distancias y someter a los
+                        enemigos.
+                        Tienen dos especializaciones:
+                    <ul>
+                        <li>Caballero Dragón</li>
+                        <li>Luchador Dragón</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="alert alert-success col-md-4 m-2" role="alert">
+                    <h4>Explorador</h4>
+                    <img width="64" height="64" src="https://img.icons8.com/3d-fluency/94/archer.png" alt="archer" />
+                    <hr>
+                    <p>
+                        Es una clase a distancia que empuña un arco para incapacitar y matar enemigos a distancia.
+                        Tienen dos especializaciones:
+                    <ul>
+                        <li>Tirador</li>
+                        <li>Cazador de viento</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="alert alert-danger col-md-4 m-2" role="alert">
+                    <h4>Guerrero</h4>
+                    <img width="64" height="64" src="https://img.icons8.com/glyph-neue/64/sword.png" alt="sword" />
+                    <hr>
+                    <p>
+                        Es una clase cuerpo a cuerpo que blande una espada para dominar a los enemigos con fuerza y
+                        ​​poder.
+                        Tienen dos especializaciones:
+                    <ul>
+                        <li>Gladiador</li>
+                        <li>Berserker</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="alert alert-warning col-md-4 m-2" role="alert">
+                    <h4>Artesano</h4>
+                    <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/sniper-rifle.png"
+                        alt="sniper-rifle" />
+                    <hr>
+                    <p>
+                        Es una clase a distancia que empuña sus creaciones mecánicas junto con su poderoso cañón
+                        para
+                        eliminar enemigos.
+                        Tienen dos especializaciones:
+                    <ul>
+                        <li>Armero</li>
+                        <li>Mecánico</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="alert alert-info col-md-4 m-2" role="alert">
+                    <h4>Mago</h4>
+                    <img width="64" height="64" src="https://img.icons8.com/color/48/sparkling.png" alt="sparkling" />
+                    <hr>
+                    <p>
+                        Es una clase a distancia que usa magia para potenciar y sanar a sus aliados, además de
+                        asestar
+                        golpes devastadores a sus enemigos.
+                        Tienen dos especializaciones:
+                    <ul>
+                        <li>Juez</li>
+                        <li>Sacerdote</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mi-footer">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h5>Sobre Wiki Legend of Neverland</h5>
+                    <p>Sitio dedicado a compartir información sobre el mundo mágico de Neverland, sus habitantes y
+                        sus
+                        historias.</p>
+                </div>
+
+                <div class="col-md-4 footer-section">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#carouselExampleIndicators">Mundo</a></li>
+                        <li><a href="#hadas_florales">Hadas Florales</a></li>
+                        <li><a href="#personajes">Clases</a></li>
+                        <li><a href="#">Infografía</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-section">
+                    <h5><strong>Redes Sociales:</strong></h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" class="social-icon">Facebook</a>
+                        <a href="https://www.x.com" class="social-icon">X</a>
+                        <a href="https://www.instagram.com" class="social-icon">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divisor">
+
+            <div class="footer-fin">
+                <p>&copy; 2025 Wiki Legend of Neverland. Trabajo realizado por <strong>PalomaJNM</strong></p>
+                <p class="footer-fined">Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+/* Definir variables para los colores de agua */
+:root {
+    --water-dark: #001f3f;
+    --water-deep-blue: #004e92;
+    --water-cyan: #00c6ff;
+    --water-light: #e0faff;
+    --water-glow: rgba(0, 198, 255, 0.6);
+}
+
+/* Override global body background with higher specificity */
+html body {
+    background: linear-gradient(135deg, #020024 0%, #090979 35%, #00d4ff 100%) !important;
+    background-size: 200% 200%;
+    animation: waterBackground 10s ease infinite !important;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+@keyframes waterBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container styling with Glassmorphism (Water Version) */
+.body-water {
+    background: rgba(0, 31, 63, 0.5);
+    /* Deep Blue Hue */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 198, 255, 0.3);
+    box-shadow: 0 0 40px rgba(0, 78, 146, 0.3), inset 0 0 30px rgba(0, 198, 255, 0.1);
+    margin: 4rem auto;
+    width: 95%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Underwater bubble glow effect */
+.body-water::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 198, 255, 0.1) 0%, transparent 60%);
+    animation: rotateFlow 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateFlow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Typography styles */
+.body-water h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+
+    /* Gradient Text */
+    background: linear-gradient(to right, var(--water-light), var(--water-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.8));
+    animation: simpleFloat 4s ease-in-out infinite;
+}
+
+@keyframes simpleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.body-water h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--water-cyan);
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Grid Styles */
+.row {
+    position: relative;
+    z-index: 1;
+}
+
+.col {
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+img {
+    width: 100%;
+    height: 400px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    cursor: pointer;
+    filter: brightness(0.9) hue-rotate(180deg) saturate(0.5);
+    /* Temporary filter to make placeholders look more 'watery' if needed, or remove if using real images */
+}
+
+/* Correcting filter for hover to be clean */
+img {
+    filter: brightness(0.95);
+}
+
+img:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 198, 255, 0.4), 0 0 20px var(--water-cyan);
+    border-color: var(--water-cyan);
+    filter: brightness(1.1) saturate(1.2);
+    z-index: 10;
+}
